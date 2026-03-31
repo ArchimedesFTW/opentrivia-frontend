@@ -3,3 +3,13 @@
     font-family: var(--v-font-mono);
   }
 }
+
+#answer-btn {
+  min-height: 6em; // Enable 2-3 line high answers
+  padding: 0.5em; // Bit more top padding
+}
+
+// Overwrite vuetify to allow buttons to wrap multiple lines
+#answer-btn .v-btn__content {
+  white-space: normal !important; 
+}

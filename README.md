@@ -1,13 +1,36 @@
-# opentrivia-frontend
 
-Scaffolded with Vuetify CLI.
+## Build + Run
+To run the program, execute
+```
+npm install
+npm run dev
+```
+The program should then be running on: 
+http://localhost:3000/opentrivia-frontend/
 
-## ❗️ Documentation
+To build the program, execute
+```
+npm install
+npm run build
+```
 
-- Primary docs: https://vuetifyjs.com/
-- Getting started guide: https://vuetifyjs.com/en/getting-started/installation/
-- Community support: https://community.vuetifyjs.com/
-- Issue tracker: https://issues.vuetifyjs.com/
+
+## API generation
+The API calls and DTO's can be extracted from the backend if (it's online). To do so, simply run:
+```
+.\fetch-api.ps1  
+```
+The backend is currently set to `localhost`. If the backend is on a different location, you should modify the file.
+
+**For Linux** run:
+```
+npm install --save-dev openapi-typescript-codegen
+curl http://127.0.0.1:8080/v3/api-docs -o openapi.json
+npx openapi-typescript-codegen --input ./openapi.json --output src/api --client axios
+```
+
+# Vuetify documentation
+_Most of the documentation below is auto-generated on setup. I changed relevant details._ 
 
 ## 🧱 Stack
 
@@ -27,9 +50,13 @@ Scaffolded with Vuetify CLI.
 
 - `src/main.ts` — application entry point
 - `src/App.vue` — root component
+- `src/api/` —    auto generated backend api structures
 - `src/components/` — reusable Vue components
 - `src/plugins/` — plugin registration and setup
+- `src/store/` — state management
 - `src/styles/` — global styles and theme settings
+- `src/util/` — helper functions
+- `src/views/` — main views
 - `public/` — static public files
 
 ## ✨ Enabled Features
