@@ -2,7 +2,7 @@
 npm install --save-dev openapi-typescript-codegen
 
 # Fetch api definitions
-Invoke-WebRequest -Uri http://127.0.0.1:8080/v3/api-docs -OutFile openapi.json
+Invoke-WebRequest -Uri https://trivia.dukebas.com/v3/api-docs -OutFile openapi.json
 
 # Generate typescript api definitions
 npx openapi-typescript-codegen --input ./openapi.json --output src/api --client axios
