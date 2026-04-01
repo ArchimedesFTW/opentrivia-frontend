@@ -15,7 +15,7 @@
                 <v-row>
                     <v-col v-for="(choice, index) in solution.question.answers" :key="index" cols="12" sm="6">
                         <v-btn id="answer-btn" class="w-100 h-100"
-                            :variant="solution.selectedIndex == index ? 'flat' : 'outlined'"
+                            :variant="solution.selectedIndex == index || index === solution.correctIndex ? 'flat' : 'outlined'"
                             :color="getColor(solution, index)"
                             readonly >
                             {{ htmlDecode(choice) }}
