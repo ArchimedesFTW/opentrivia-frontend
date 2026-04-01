@@ -20,7 +20,7 @@ export type OpenAPIConfig = {
 };
 
 export const OpenAPI: OpenAPIConfig = {
-    BASE: 'http://trivia.dukebas.com',
+    BASE: 'https://trivia.dukebas.com',
     VERSION: '0',
     WITH_CREDENTIALS: false,
     CREDENTIALS: 'include',
