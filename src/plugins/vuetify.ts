@@ -7,7 +7,7 @@
 // Composables
 import { createVuetify } from 'vuetify'
 // Styles
-import '@mdi/font/css/materialdesignicons.css'
+import { aliases, mdi } from 'vuetify/iconsets/mdi-svg'
 
 import '../styles/layers.css'
 import 'vuetify/styles'
@@ -21,6 +21,13 @@ export default createVuetify({
     VCard: {
       elevation: 2,
       rounded: 'lg',
+    },
+  },
+  icons: {
+    defaultSet: 'mdi',
+    aliases,
+    sets: {
+      mdi,
     },
   },
 })

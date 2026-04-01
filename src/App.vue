@@ -6,8 +6,8 @@
         class="mx-auto align-self-center" />
 
       <!-- Actual visible icons -->
-      <v-btn icon="mdi-github" href="https://github.com/ArchimedesFTW/opentrivia-frontend" target="_blank" />
-      <v-btn icon="mdi-theme-light-dark" @click="$vuetify.theme.cycle()" />
+      <v-btn :icon="mdiGithub" href="https://github.com/ArchimedesFTW/opentrivia" target="_blank" />
+      <v-btn :icon="mdiThemeLightDark" @click="$vuetify.theme.cycle()" />
     </v-app-bar>
 
     <v-main class="my-3">
@@ -26,6 +26,7 @@
 </template>
 
 <script lang="ts" setup>
+import { mdiGithub, mdiThemeLightDark } from '@mdi/js'
 import { currentView, View, error } from '@/store/quizManager'
 import Start from './views/Start.vue';
 import Quiz from './views/Quiz.vue';

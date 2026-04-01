@@ -20,7 +20,7 @@
         <v-btn color="secondary" 
             :disabled="questionIndex === 0" 
             @click="previousQuestion"
-            prepend-icon="mdi-chevron-left"
+            :prepend-icon="mdiChevronLeft"
             >
             Previous</v-btn>
         <v-spacer />
@@ -29,7 +29,7 @@
             :disabled="selectedIndex === null"
             color="primary"  
             @click="nextQuestion"
-            append-icon="mdi-chevron-right"
+            :append-icon="mdiChevronRight"
             >
             Next</v-btn>
         <v-btn 
@@ -57,6 +57,7 @@
 import { ref } from 'vue'
 import { questions, answers, submitAnswers } from '@/store/quizManager'
 import { htmlDecode } from '@/util/htmlDecoder'
+import { mdiChevronLeft, mdiChevronRight } from '@mdi/js'
 
 const questionIndex = ref(0)
 const question = ref(questions.value[questionIndex.value])
