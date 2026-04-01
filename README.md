@@ -16,7 +16,7 @@ npm run build
 
 
 ## API generation
-The API calls and DTO's can be extracted from the backend if (it's online). To do so, simply run:
+The API calls and DTO's can be extracted from the backend if it's online. To do so, simply run:
 ```
 .\fetch-api.ps1  
 ```
