@@ -20,7 +20,7 @@ The API calls and DTO's can be extracted from the backend if (it's online). To d
 ```
 .\fetch-api.ps1  
 ```
-The backend is currently set to `localhost`. If the backend is on a different location, you should modify the file.
+The backend is currently set to the cloud instance `https://trivia.dukebas.com/`. If the backend is on a different location (e.g. `localhost`), you should modify the file.
 
 **For Linux** run:
 ```
